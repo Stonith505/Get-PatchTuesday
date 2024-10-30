@@ -1,5 +1,6 @@
-Powershell function wich returns the patch Tuesday of the current month
+Powershell function to return the patch Tuesday of the current month.
 
+```powershell
 Function Get-PatchTuesday {
   [datetime]$today = [datetime]::NOW
   $todayM = $today.Month.ToString()
@@ -10,3 +11,4 @@ Function Get-PatchTuesday {
   $patchTuesday = $firstWeekDay.AddDays(7) 
   return $patchTuesday
 }
+```
